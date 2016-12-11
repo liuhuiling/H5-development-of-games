@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>圆形</title>
+</head>
+<body>
+<canvas id="myCanvas" height="1000" width="2000"></canvas>
+<script>
+    var c=document.getElementById("myCanvas");
+    var ctx= c.getContext("2d");
+    ctx.lineWidth=10;
+    ctx.strokeStyle="yellow";
+   ctx.fillStyle="red";
+    ctx.beginPath();
+    //圆形的6个参数分别是圆弧中心坐标x，y，半径，起始角度，终止角度，是否逆时针
+    ctx.arc(200,200,70,0,150*Math.PI/180,true);
+    ctx.stroke();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(500,500,70,0,360*Math.PI/180,true);
+    ctx.stroke();
+    ctx.fill();
+</script>
+
+</body>
+</html>
