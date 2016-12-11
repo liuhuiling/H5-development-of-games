@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>stroke()函数空心矩形</title>
+</head>
+<body>
+    <canvas id="myCanvas" height="200" width="400"></canvas>
+    <script>
+    var c=document.getElementById("myCanvas");
+    var ctx= c.getContext("2d");
+    ctx.lineWidth=5;
+    ctx.strokeStyle="green";
+    ctx.fillStyle="red";
+    ctx.beginPath();
+
+    //方法一： 用strokeRect（）函数来绘制矩形，4个参数：起点坐标x和y，矩形长，矩形宽。
+      ctx.strokeRect(80,60,70,40);
+    //方法一： 用fillRect（）函数来绘制矩形
+      ctx.fillRect(10,10,70,40);
+
+    //方法二： 用rect（）函数来绘制矩形
+      ctx.beginPath();
+      ctx.rect(230,10,70,40);
+      ctx.stroke();
+    //方法二： 用rect（）函数来绘制矩形
+      ctx.beginPath();
+      ctx.rect(160,60,70,40);
+      ctx.fill();
+
+
+    </script>
+</body>
+</html>
