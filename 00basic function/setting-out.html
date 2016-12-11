@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>画线</title>
+</head>
+<body>
+    <canvas id="myCanvas" height="100" width="200">
+    你的浏览器不支持HTML5
+    </canvas>
+    <script>
+        /*var c=document.getElementById("myCanvas");//获取html中的canvas标签
+        var ctx= c.getContext("2d");//返回一个用来绘制环境类型的环境，是一个CanvasRenderingConyext2D画布
+        ctx.lineWidth=10;// 设置线条宽度
+        ctx.strokeStyle="red";//设置画笔颜色
+        ctx.beginPath();//创建一个新的路径
+        ctx.moveTo(10,10);//画笔光标移动到坐标处
+        ctx.lineTo(150,50);//从当前坐标移动画笔到新坐标处，绘制一条直线
+        ctx.stroke();//开始绘制定义好的路径*/
+
+        var c=document.getElementById("myCanvas");
+        var ctx= c.getContext("2d");
+        ctx.lineWidth=10;
+        ctx.strokeStyle="red";
+
+        //下面在划线的时候，用lineCap定义线帽的样式,3种样式
+        //样式1
+        ctx.lineCap="butt";
+        ctx.beginPath();
+        ctx.moveTo(10,10);
+        ctx.lineTo(150,10);
+        ctx.stroke();
+
+        ctx.lineCap="round";
+        ctx.beginPath();
+        ctx.moveTo(10,40);
+        ctx.lineTo(150,40);
+        ctx.stroke();
+
+        ctx.lineCap="square";
+        ctx.beginPath();
+        ctx.moveTo(10,70);
+        ctx.lineTo(150,70);
+        ctx.stroke();
+    </script>
+</body>
+</html>
